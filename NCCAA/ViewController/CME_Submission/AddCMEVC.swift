@@ -52,6 +52,7 @@ class AddCMEVC: UIViewController {
         
         if isEdit {
             lblAddCME.text = "Edit CME"
+            btnChooseFile.setTitle("Uploaded", for: .normal)
             
             intUploadId = dictEdit?["uploadId"] as! Int
             strProviderId = dictEdit?["cmeProvider"] as! String
@@ -261,6 +262,8 @@ class AddCMEVC: UIViewController {
             
             if let id = response["uploadId"] {
                 self.intUploadId = id as! Int
+                self.btnChooseFile.setTitle("Uploaded", for: .normal)
+                Toast.show(message: "Uploaded", controller: self)
             }
             Helper.shared.hideHUD()
         }
@@ -424,8 +427,17 @@ extension AddCMEVC: UIDocumentPickerDelegate {
                 // Handle the failure here.
                 return
             }
-            
+                   
             do {
+                let resources = try url.resourceValues(forKeys: [.fileSizeKey])
+                
+                if let fileSize = resources.fileSize {
+                    if fileSize >= 25 * 1024 * 1024 {
+                        Toast.show(message: "The maximum file size must be 25M or less.", controller: self)
+                        return
+                    }
+                }
+                
                 let data = try Data.init(contentsOf: url)
                 // You will have data of the selected file
                 self.addDocumentAPI(docData: data, fileName: url.lastPathComponent)
@@ -433,9 +445,8 @@ extension AddCMEVC: UIDocumentPickerDelegate {
             catch {
                 print(error.localizedDescription)
             }
-            
             // Make sure you release the security-scoped resource when you finish.
-            defer { url.stopAccessingSecurityScopedResource() }
+            do { url.stopAccessingSecurityScopedResource() }
         }
     }
     

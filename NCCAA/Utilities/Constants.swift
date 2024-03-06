@@ -9,7 +9,7 @@ import UIKit
 
 
 struct URLs {
-    static let baseurl = "https://www.nccaatest.org/api/"//"https://nccaatest1.globaltechkyllc.com/api/"//
+    static let baseurl = "https://nccaatest1.globaltechkyllc.com/api/"
     
     static let login = baseurl + "auth/login"
     static let blogs = baseurl + "blogs"

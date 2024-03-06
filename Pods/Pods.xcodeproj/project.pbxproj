@@ -1004,7 +1004,7 @@
 		9AE865145E6210CFEAE180C9F0FFE088 /* Comment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = "Source/DOM classes/Core DOM/Comment.h"; sourceTree = "<group>"; };
 		9B29597FB264EEAF7BFC2964307CF5F2 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
 		9D8F24246CA0AB54D87B419259A1CA75 /* SVGKParserDOM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGKParserDOM.h; path = "Source/Parsers/Parser Extensions/SVGKParserDOM.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DA920EE0786126157C3533A51EF6801 /* SVProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SVProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		9E6D0796DEBD2E23C3CDCC94FA05C3C9 /* SVGKParserStyles.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SVGKParserStyles.h; path = "Source/Parsers/Parser Extensions/SVGKParserStyles.h"; sourceTree = "<group>"; };
 		9F1D7345977FD2BB93F75C303FAC6793 /* SVGTextPositioningElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGTextPositioningElement.m; path = "Source/DOM classes/SVG-DOM/SVGTextPositioningElement.m"; sourceTree = "<group>"; };
@@ -1378,7 +1378,6 @@
 				0F09B7DF43334094F72268E5765A8CCA /* Core */,
 				FB3E9E7A37A24ADA1442AE6FCCEEEB96 /* Support Files */,
 			);
-			name = CocoaLumberjack;
 			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
@@ -1668,7 +1667,6 @@
 				3A66DF6411C81E5E40BC5144160F99BB /* TinySVGTextAreaElement.m */,
 				DFA7851D96B1E3EC41C25CF07A266E2E /* Support Files */,
 			);
-			name = SVGKit;
 			path = SVGKit;
 			sourceTree = "<group>";
 		};
@@ -1693,7 +1691,6 @@
 				069A111298CABD226010A6C0DCD7AF04 /* MarqueeLabel.swift */,
 				65ED2BE2019833B21ABB9B5B660137C8 /* Support Files */,
 			);
-			name = MarqueeLabel;
 			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
@@ -1719,7 +1716,6 @@
 				1E82664EB6A4AB6BF7AF5F31D7B19659 /* Validation.swift */,
 				B6F44D7589420F66DC3F8059AD68D613 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1752,7 +1748,6 @@
 				592D7E77DEA6D2312D6D4B53FCF92D8A /* Resources */,
 				1A86219893C0BF670CABF8EB1BA27701 /* Support Files */,
 			);
-			name = SVProgressHUD;
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
@@ -1781,7 +1776,6 @@
 				EB98F08438F2E0F37DC4D438B4683F3B /* UITextField+fixCaretPosition.swift */,
 				870717611C4FD9E9F8845D3C17A9BC60 /* Support Files */,
 			);
-			name = SkyFloatingLabelTextField;
 			path = SkyFloatingLabelTextField;
 			sourceTree = "<group>";
 		};
@@ -1812,7 +1806,6 @@
 				98FF6877093DC02EA6989F72BF47D291 /* Core */,
 				087A25C2F0177F2B42F9C03A8986FB29 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1837,7 +1830,6 @@
 				D5ADE09CC5AA157ACEBEBDB17FE38EDB /* AlamofireObjectMapper.swift */,
 				B0253C524AF69994B459BF351E61D888 /* Support Files */,
 			);
-			name = AlamofireObjectMapper;
 			path = AlamofireObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -2097,7 +2089,6 @@
 				DC52336E0B98ABE5CCB74D44DF60EDFF /* URLTransform.swift */,
 				7BE75311C2974B45D3A16AD79A4C0DA6 /* Support Files */,
 			);
-			name = ObjectMapper;
 			path = ObjectMapper;
 			sourceTree = "<group>";
 		};
@@ -2140,7 +2131,6 @@
 				2298976CBBAA890002E20D665BB969E1 /* IQUIViewController+Additions.swift */,
 				3EE53331C4C223C10A62671474AB481D /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -2725,6 +2715,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3F64080413BB03C0B16BFEB621E6E0F2 = {
+						LastSwiftMigration = "";
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
