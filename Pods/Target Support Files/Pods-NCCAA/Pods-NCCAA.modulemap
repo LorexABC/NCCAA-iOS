@@ -1,0 +1,6 @@
+framework module Pods_NCCAA {
+  umbrella header "Pods-NCCAA-umbrella.h"
+
+  export *
+  module * { export * }
+}

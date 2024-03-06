@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - CocoaLumberjack (3.7.4):
+    - CocoaLumberjack/Core (= 3.7.4)
+  - CocoaLumberjack/Core (3.7.4)
+  - IQKeyboardManagerSwift (6.5.10)
+  - MarqueeLabel (4.3.0)
+  - ObjectMapper (3.5.3)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SkyFloatingLabelTextField (4.0.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper (~> 5.2)
+  - IQKeyboardManagerSwift
+  - MarqueeLabel
+  - SDWebImage (~> 5.0)
+  - SkyFloatingLabelTextField
+  - SVGKit
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireObjectMapper
+    - CocoaLumberjack
+    - IQKeyboardManagerSwift
+    - MarqueeLabel
+    - ObjectMapper
+    - SDWebImage
+    - SkyFloatingLabelTextField
+    - SVGKit
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
+  MarqueeLabel: 02f5ac8fd6877c94564556cb93fa86c70c08baeb
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SkyFloatingLabelTextField: 79ddc40e4ad59707fedbb48d605417aee48bb78a
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 0f0b2773706bf6950763e3c6e66461895dcfe410
+
+COCOAPODS: 1.11.3

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFPRODISPLAYMEDIUM.OTF">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SFPRODISPLAYREGULAR.OTF">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="kfM-aM-0TE" customClass="CategoryStatusHeaderView" customModule="NCCAA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ1-qX-CSy">
+                    <rect key="frame" x="344" y="30" width="60" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="tlc-bm-d61"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                    <color key="textColor" name="AppDarkGray"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient ASA Class 3&amp;4" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l57-ke-ogI">
+                    <rect key="frame" x="10" y="30" width="326" height="20.5"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                    <color key="textColor" name="AppBlack"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="nrh-bl-iTV"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="l57-ke-ogI" firstAttribute="centerY" secondItem="kfM-aM-0TE" secondAttribute="centerY" id="PqH-Vn-SlG"/>
+                <constraint firstItem="l57-ke-ogI" firstAttribute="leading" secondItem="nrh-bl-iTV" secondAttribute="leading" constant="10" id="ReY-9e-zWz"/>
+                <constraint firstItem="mJ1-qX-CSy" firstAttribute="leading" secondItem="l57-ke-ogI" secondAttribute="trailing" constant="8" id="rK7-6V-pPO"/>
+                <constraint firstItem="mJ1-qX-CSy" firstAttribute="centerY" secondItem="l57-ke-ogI" secondAttribute="centerY" id="uWa-UP-GMC"/>
+                <constraint firstItem="nrh-bl-iTV" firstAttribute="trailing" secondItem="mJ1-qX-CSy" secondAttribute="trailing" constant="10" id="uod-sT-iEu"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblCategory" destination="l57-ke-ogI" id="dJJ-tR-OwO"/>
+                <outlet property="lblSkills" destination="mJ1-qX-CSy" id="D1C-1U-qd1"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="68.973214285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="AppBlack">
+            <color red="0.15299999713897705" green="0.18400000035762787" blue="0.24300000071525574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppDarkGray">
+            <color red="0.42399999499320984" green="0.44699999690055847" blue="0.49799999594688416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
