@@ -137,10 +137,10 @@ extension HomeVC:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
         if indexPath.row == 2 {
             
             if Helper.shared.userType == "student" {
-//                let obj = self.storyboard?.instantiateViewController(withIdentifier: "ClinicalCompetenciesVC") as! ClinicalCompetenciesVC
-//                navigationController?.pushViewController(obj, animated: true)
+                let obj = self.storyboard?.instantiateViewController(withIdentifier: "ClinicalCompetenciesVC") as! ClinicalCompetenciesVC
+                navigationController?.pushViewController(obj, animated: true)
                 
-                Toast.show(message: "This module will not be available until 2024.", controller: self)
+                // Toast.show(message: "This module will not be available until 2024.", controller: self)
             } else {
                 Toast.show(message: Message.caaModuleUnavailable, controller: self)
             }
