@@ -317,11 +317,17 @@ extension CMESubmissionVC: UICollectionViewDataSource, UICollectionViewDelegateF
         cell.lblDesc.text = arrHistory?[indexPath.row]["name"] as? String
         // cell.lblDate.text = arrHistory?[indexPath.row]["dateSubmitted"] as? String
         let date = arrHistory?[indexPath.row]["dateSubmitted"] as? String
-        let stringDate = String(describing: date)
+        let originalString = String(describing: date)
         
-        if let index = stringDate.firstIndex(of: "T") {
-            let _date = stringDate.prefix(upTo: index)
-            cell.lblDate.text = String(describing: _date)
+        if let startRange = originalString.range(of: "\""), let endRange = originalString.range(of: "T") {
+            let startIndex = originalString.index(startRange.upperBound, offsetBy: 0)
+            let endIndex = originalString.index(endRange.lowerBound, offsetBy: 0)
+            
+            let slicedDate = String(originalString[startIndex..<endIndex])
+            
+            cell.lblDate.text = slicedDate
+        } else {
+            print("Could not extract the date from the original string.")
         }
 
         
