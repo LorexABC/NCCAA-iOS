@@ -151,25 +151,25 @@ class StateLicensingVC: UIViewController {
 
         NetworkManager.shared.webserviceCallStateLicensing(url: URLs.licensing, parameters: parameters, headers:headers) { (response) in
 
-            //if response.ResponseCode == 200 {
 
-            //print(response)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                self.navigationController?.popViewController(animated: true)
-            }
+            // DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            //     self.navigationController?.popViewController(animated: true)
+            // }
+            
+            Helper.shared.hideHUD()
+            
             if let _  = response["receiptId"] {
 
                 Toast.show(message: "Your message has been sent to NCCAA. Thank You", controller: self)
+                let object = self.storyboard?.instantiateViewController(withIdentifier: "CreditCardVC") as! CreditCardVC
+                object.intReceiptId = response["receiptId"] as? Int
+                object.isFromVC = "StateLicensing"
+
+                self.navigationController?.pushViewController(object, animated: true)
+
             } else {
                 Toast.show(message: "This message could not be sent\nEither try again or send NCCAA an email shown below", controller: self)
             }
-
-
-            //            } else {
-            //                Toast.show(message: response.ResponseMsg ?? "", controller: self)
-            //            }
-            Helper.shared.hideHUD()
         }
     }
     func userAPI() {
@@ -281,6 +281,8 @@ class StateLicensingVC: UIViewController {
         
         Helper.shared.logoutFromApp(vc: self)
     }
+    @IBAction func unwindToStateLicensingVC(segue: UIStoryboardSegue) {}
+    
 }
 extension StateLicensingVC:UIPickerViewDataSource, UIPickerViewDelegate {
     

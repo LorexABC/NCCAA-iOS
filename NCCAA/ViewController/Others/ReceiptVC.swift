@@ -149,6 +149,9 @@ class ReceiptVC: UIViewController {
         if isFromVC == "CME" {
             self.performSegue(withIdentifier: "unwindCME", sender: self)
         }
+        if isFromVC == "StateLicensing" {
+            self.performSegue(withIdentifier: "unwindState", sender: self)
+        }
     }
     
     @IBAction func btnReturn(_ sender: Any) {

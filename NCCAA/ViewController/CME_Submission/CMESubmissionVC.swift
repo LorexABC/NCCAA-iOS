@@ -315,7 +315,16 @@ extension CMESubmissionVC: UICollectionViewDataSource, UICollectionViewDelegateF
         }
         
         cell.lblDesc.text = arrHistory?[indexPath.row]["name"] as? String
-        cell.lblDate.text = arrHistory?[indexPath.row]["dateSubmitted"] as? String
+        // cell.lblDate.text = arrHistory?[indexPath.row]["dateSubmitted"] as? String
+        let date = arrHistory?[indexPath.row]["dateSubmitted"] as? String
+        let stringDate = String(describing: date)
+        
+        if let index = stringDate.firstIndex(of: "T") {
+            let _date = stringDate.prefix(upTo: index)
+            cell.lblDate.text = String(describing: _date)
+        }
+
+        
         cell.lblCredits.text = "\((arrHistory?[indexPath.row]["hours"] as? Double ?? 0).rounded(toPlaces: 2))"
         cell.lblType.text = (arrHistory?[indexPath.row]["type"] as? String)?.capitalizingFirstLetter()
         

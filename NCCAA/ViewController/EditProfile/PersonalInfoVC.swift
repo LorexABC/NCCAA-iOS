@@ -598,7 +598,35 @@ extension PersonalInfoVC:UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == txtEmail || textField == txtFirstName || textField == txtMiddleName || textField == txtLastName || textField == txtOtherEthnicity || textField == txtCellPhone || textField == txtOtherPhone || textField == txtStreet || textField == txtCity || textField == txtZip || textField == txtClass {
-            return true
+            if textField == txtFirstName || textField == txtMiddleName || textField == txtLastName {
+                guard let text = textField.text as NSString? else { return true }
+                let newText = text.replacingCharacters(in: range, with: string)
+                if newText.hasSuffix(" ") || newText.hasSuffix("-") {
+                    textField.text = newText
+                    return true
+                }
+                let names = newText.components(separatedBy: " ")
+                var formattedName = ""
+                for name in names {
+                    if !name.isEmpty {
+                        let formattedPart = name.prefix(1).uppercased() + name.dropFirst().lowercased()
+                        
+                        if formattedPart.contains("-") {
+                            let hyphenatedNames = formattedPart.components(separatedBy: "-")
+                            var hyphenatedFormattedName = ""
+                            
+                            for hyphenatedName in hyphenatedNames {
+                                hyphenatedFormattedName += hyphenatedName.prefix(1).uppercased() + hyphenatedName.dropFirst().lowercased() + "-"
+                            }
+                        }
+                        formattedName += formattedPart + " "
+                    }
+                }
+                textField.text = formattedName.trimmingCharacters(in: .whitespaces)
+                return false
+            } else {
+                return true
+            }
         }
         return false
     }
