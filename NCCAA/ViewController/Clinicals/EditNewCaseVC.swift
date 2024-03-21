@@ -12,6 +12,8 @@ class EditNewCaseVC: UIViewController {
     // MARK: - Variable
     var delegate:ShowToast?
     var time = Date()
+    var myPickerView : UIPickerView!
+    var selectedTextfield:UITextField?
     var selectedStartingTime = String()
     var selectedEndingTime = String()
     var dictCaseDetails:[String:Any]?
@@ -19,6 +21,7 @@ class EditNewCaseVC: UIViewController {
     var isASA = "no"
     var picker:UIDatePicker?
     var arrCatID:[Int] = []
+    var arrClassification = ["ASA1", "ASA2", "ASA3", "ASA4", "ASA5", "ASA6"]
     
     // MARK: - IBOutlet
     @IBOutlet weak var startTimePicker: UIDatePicker!
@@ -29,7 +32,7 @@ class EditNewCaseVC: UIViewController {
     @IBOutlet weak var btnSwitch: UISwitch!
     @IBOutlet weak var txtAge: UITextField!
     @IBOutlet weak var txtview: UITextView!
-    
+    @IBOutlet weak var sctClassification: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,7 @@ class EditNewCaseVC: UIViewController {
     
 
     // MARK: - Function
+
     
     func setupUI() {
         
@@ -79,6 +83,41 @@ class EditNewCaseVC: UIViewController {
 
         startTimePicker.date = date1!
         endTimePicker.date = date2!
+    }
+    
+    func pickUp(textField : UITextField, text:String){
+        
+        view.viewWithTag(1001)?.removeFromSuperview()
+        view.viewWithTag(1002)?.removeFromSuperview()
+        // UIPickerView
+        self.myPickerView = UIPickerView(frame:CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 216))
+        myPickerView.tag = 1001
+        self.myPickerView.delegate = self
+        self.myPickerView.dataSource = self
+        self.myPickerView.backgroundColor = UIColor.white
+        textField.inputView = self.myPickerView
+        
+        // ToolBar
+        let toolBar = UIToolbar()
+        toolBar.tag = 1002
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        toolBar.tintColor = UIColor.black
+        toolBar.sizeToFit()
+        
+        // Adding Button ToolBar
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.doneClick))
+        let labelButton = UIBarButtonItem(title: text.maxLength(length: 35), style: .plain, target: nil, action: nil)
+
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([labelButton,spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        textField.inputAccessoryView = toolBar
+        
+    }
+    
+    @objc func doneClick() {
+        selectedTextfield?.resignFirstResponder()
     }
     
     func setDatePicker() {
@@ -238,5 +277,47 @@ extension EditNewCaseVC: CategoriesCustomDelegate {
             str += "\(name[i])\n"
         }
         txtview.text = str
+    }
+}
+
+extension EditNewCaseVC:UITextFieldDelegate {
+    
+    //MARK:- TextFiled Delegate
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        selectedTextfield = textField
+        
+        self.pickUp(textField: textField, text: textField.placeholder ?? "")
+    }
+}
+
+extension EditNewCaseVC:UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrClassification.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: pickerView.frame.width, height: 44));
+        label.font = UIFont(name: "SFProDisplay-Regular", size: 17.0)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        
+        label.text = arrClassification[row]
+        label.sizeToFit()
+        return label
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 50
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedTextfield?.text = arrClassification[row]
     }
 }

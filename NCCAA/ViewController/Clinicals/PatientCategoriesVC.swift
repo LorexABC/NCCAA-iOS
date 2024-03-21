@@ -24,6 +24,9 @@ class PatientCategoriesVC: UIViewController {
     var isFromEditCase = false
     var arrEditCat:[[String:Any]]?
     var delegate:CategoriesCustomDelegate!
+    var patientAge = ""
+    var classification = ""
+    var asa = false
     
     // MARK: - IBOutlet
     @IBOutlet weak var table: UITableView!
@@ -112,7 +115,11 @@ class PatientCategoriesVC: UIViewController {
                 
                 for i in 0..<(self.arrFilteredCat?.count ?? 0) {
                     
-                    self.arrSectionFlag.append(0)
+                    if i == 1 && Int(self.classification.suffix(1)) ?? 0 > 2 {
+                        self.arrSectionFlag.append(self.arrFilteredCat?[i].id! ?? 0)
+                    } else {
+                        self.arrSectionFlag.append(0)
+                    }
                     var arrTemp:[Int] = []
                     for _ in 0..<(self.arrFilteredCat?[i].sub_category?.count ?? 0) {
                         
@@ -187,7 +194,7 @@ class PatientCategoriesVC: UIViewController {
         //
         var arrName:[String] = []
         for i in 0..<arr.count {
-            if let index = arrFilteredCat?.firstIndex{$0.id == arr[i]} {
+            if let index = arrFilteredCat?.firstIndex(where: {$0.id == arr[i]}) {
                 
                 arrName.append(arrFilteredCat?[index].name ?? "")
             }
@@ -201,9 +208,9 @@ class PatientCategoriesVC: UIViewController {
                 
                 let arr6 = arrFilteredCat?[k].sub_category
                 
-                for m in 0..<(arr6?.count ?? 0) {
+                for _ in 0..<(arr6?.count ?? 0) {
                     
-                    if let index = arr6?.firstIndex{$0["id"] as! Int == arr[j]} {
+                    if let index = arr6?.firstIndex(where: {$0["id"] as! Int == arr[j]}) {
                         
                         arrNameSubCat.append(arr6?[index]["name"] as? String ?? "")
                     }

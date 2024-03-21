@@ -3673,7 +3673,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qR4-I0-jHa">
-                                                <rect key="frame" x="16" y="237" width="392" height="528.33333333333326"/>
+                                                <rect key="frame" x="16" y="237" width="392" height="528.33333333333337"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OkH-h1-hfB">
                                                         <rect key="frame" x="0.0" y="0.0" width="392" height="60"/>
@@ -5478,7 +5478,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of Exam:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEq-n3-Ybg">
-                                                                    <rect key="frame" x="20" y="54" width="83.666666666666657" height="17"/>
+                                                                    <rect key="frame" x="20" y="54" width="83.666666666666671" height="17"/>
                                                                     <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="14"/>
                                                                     <color key="textColor" red="0.14117647059999999" green="0.2666666667" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -7541,7 +7541,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
             <objects>
                 <viewController storyboardIdentifier="EmployerInfoVC" id="QB4-IG-nhh" customClass="EmployerInfoVC" customModule="NCCAA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bIx-6R-Bri">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="685.33333333333337"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="685"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozH-oO-H2K">
@@ -13159,7 +13159,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                 <rect key="frame" x="0.0" y="91" width="428" height="801"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YAf-Rt-ryC" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="427.66666666666669" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="427.66666666666669" height="950"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start New Case/Patient " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9S-8F-9by" userLabel="Start New Case/Patient">
                                                 <rect key="frame" x="25.666666666666657" y="24" width="376.33333333333337" height="30"/>
@@ -13171,7 +13171,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-AJ-pG1">
-                                                <rect key="frame" x="25.666666666666657" y="74" width="376.33333333333337" height="387"/>
+                                                <rect key="frame" x="25.666666666666657" y="74" width="376.33333333333337" height="441"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PgY-0M-xrz">
                                                         <rect key="frame" x="0.0" y="0.0" width="376.33333333333331" height="45"/>
@@ -13238,6 +13238,9 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                                 </connections>
                                                             </datePicker>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="MkI-PR-cLd"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrv-fq-Vtp">
                                                         <rect key="frame" x="0.0" y="162" width="376.33333333333331" height="1"/>
@@ -13262,6 +13265,9 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                                 </connections>
                                                             </datePicker>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="gM2-PP-IUa"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeV-d1-O5K">
                                                         <rect key="frame" x="0.0" y="218" width="376.33333333333331" height="1"/>
@@ -13278,42 +13284,91 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="doneAccessory" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fRm-xo-tAm">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-ci-E4u">
                                                         <rect key="frame" x="0.0" y="274" width="376.33333333333331" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="1" id="JbR-ei-zmy"/>
+                                                            <constraint firstAttribute="height" constant="1" id="agd-3i-QjO"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIC-is-1gN">
+                                                        <rect key="frame" x="0.0" y="280" width="376.33333333333331" height="45"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHP-UH-yWP">
+                                                                <rect key="frame" x="0.0" y="44" width="376.33333333333331" height="1"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="jD5-Ls-mKD"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureArrow" translatesAutoresizingMaskIntoConstraints="NO" id="rCb-js-9CF">
+                                                                <rect key="frame" x="351.33333333333331" y="10" width="25" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="25" id="hcp-iZ-ypU"/>
+                                                                    <constraint firstAttribute="width" constant="25" id="vgh-B9-ucu"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ASA Classification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-IF-38T" userLabel="Sct Classification">
+                                                                <rect key="frame" x="-0.66666666666662877" y="0.0" width="376.33333333333348" height="45"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="k4x-iF-v41" id="3R6-s2-NgM"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="XHP-UH-yWP" secondAttribute="bottom" id="3NF-YO-FPF"/>
+                                                            <constraint firstAttribute="height" constant="45" id="aTA-Nx-40H"/>
+                                                            <constraint firstItem="XHP-UH-yWP" firstAttribute="leading" secondItem="ZIC-is-1gN" secondAttribute="leading" id="jCe-Lk-kz3"/>
+                                                            <constraint firstAttribute="trailing" secondItem="XHP-UH-yWP" secondAttribute="trailing" id="jSN-fi-WMx"/>
+                                                            <constraint firstItem="rCb-js-9CF" firstAttribute="centerY" secondItem="ZIC-is-1gN" secondAttribute="centerY" id="wLm-6M-rMX"/>
+                                                            <constraint firstAttribute="trailing" secondItem="rCb-js-9CF" secondAttribute="trailing" id="wW4-Hi-H8d"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3f-Yh-EOU">
+                                                        <rect key="frame" x="0.0" y="330" width="376.33333333333331" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="te0-Qx-fU6"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="crX-tz-Edq">
-                                                        <rect key="frame" x="0.0" y="287" width="376.33333333333331" height="31"/>
+                                                        <rect key="frame" x="0.0" y="336" width="376.33333333333331" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASA (Yes/No)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZm-Pq-FiR">
-                                                                <rect key="frame" x="0.0" y="6" width="226.33333333333334" height="19.333333333333332"/>
+                                                                <rect key="frame" x="0.0" y="12.999999999999998" width="226.33333333333334" height="19.333333333333329"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                                 <color key="textColor" name="AppBlack"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NeX-vi-P42">
-                                                                <rect key="frame" x="327.33333333333331" y="0.0" width="51" height="31"/>
+                                                                <rect key="frame" x="327.33333333333331" y="7" width="51" height="31"/>
                                                                 <connections>
                                                                     <action selector="btnSwitch:" destination="k4x-iF-v41" eventType="valueChanged" id="nm0-zg-Efg"/>
                                                                 </connections>
                                                             </switch>
                                                         </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="0bb-zl-GJp"/>
+                                                        </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4g-8T-dcx">
-                                                        <rect key="frame" x="0.0" y="330" width="376.33333333333331" height="1"/>
+                                                        <rect key="frame" x="0.0" y="386" width="376.33333333333331" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="E6g-wl-JNb"/>
                                                         </constraints>
                                                     </view>
                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HEc-O6-xef">
-                                                        <rect key="frame" x="0.0" y="336" width="376.33333333333331" height="45"/>
+                                                        <rect key="frame" x="0.0" y="398.66666666666663" width="376.33333333333331" height="32"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNw-rz-nCT">
-                                                                <rect key="frame" x="0.0" y="0.0" width="351.33333333333331" height="45"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="351.33333333333331" height="32"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                                 <inset key="imageEdgeInsets" minX="273" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                                 <state key="normal" title="Categories/Skills">
@@ -13324,7 +13379,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                                 </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureArrow" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-33-8sn">
-                                                                <rect key="frame" x="351.33333333333331" y="10" width="25" height="25"/>
+                                                                <rect key="frame" x="351.33333333333331" y="3.3333333333333712" width="25" height="25"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="25" id="1Ie-LY-QIK"/>
                                                                     <constraint firstAttribute="width" constant="25" id="ZEV-P6-RIR"/>
@@ -13336,7 +13391,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-1A-BTC">
-                                                        <rect key="frame" x="0.0" y="386" width="376.33333333333331" height="1"/>
+                                                        <rect key="frame" x="0.0" y="440" width="376.33333333333331" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="pF9-0N-aCN"/>
@@ -13351,7 +13406,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                 </constraints>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GsS-vk-EO4">
-                                                <rect key="frame" x="40" y="611" width="347.66666666666669" height="45"/>
+                                                <rect key="frame" x="40" y="665" width="347.66666666666669" height="45"/>
                                                 <color key="backgroundColor" name="AppBlue"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="OXC-b0-Lll"/>
@@ -13370,7 +13425,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IvQ-2G-ZNn">
-                                                <rect key="frame" x="25.666666666666657" y="471" width="376.33333333333337" height="90"/>
+                                                <rect key="frame" x="25.666666666666657" y="525" width="376.33333333333337" height="90"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -13385,7 +13440,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="896" id="7Rm-04-enJ"/>
+                                            <constraint firstAttribute="height" constant="950" id="7Rm-04-enJ"/>
                                             <constraint firstItem="GsS-vk-EO4" firstAttribute="top" secondItem="EKr-AJ-pG1" secondAttribute="bottom" constant="150" id="DIc-YQ-iqT"/>
                                             <constraint firstItem="IvQ-2G-ZNn" firstAttribute="centerX" secondItem="YAf-Rt-ryC" secondAttribute="centerX" id="DQx-Ac-g9j"/>
                                             <constraint firstItem="EKr-AJ-pG1" firstAttribute="top" secondItem="l9S-8F-9by" secondAttribute="bottom" constant="20" id="FI1-ha-r5j"/>
@@ -13466,6 +13521,42 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                     <constraint firstItem="9pT-Ug-RyJ" firstAttribute="leading" secondItem="GjD-0q-yLL" secondAttribute="trailing" constant="5" id="mqj-yB-sgf"/>
                                     <constraint firstItem="XaL-Sn-dqD" firstAttribute="bottom" secondItem="GjD-0q-yLL" secondAttribute="bottom" id="nJr-4E-lMx"/>
                                     <constraint firstItem="XaL-Sn-dqD" firstAttribute="top" secondItem="GjD-0q-yLL" secondAttribute="top" id="u8k-vQ-LPT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3s1-db-IMo">
+                                <rect key="frame" x="25" y="440" width="376.33333333333303" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0j-Ph-JBJ">
+                                        <rect key="frame" x="0.0" y="44" width="0.0" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="ukH-Gw-3HZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureArrow" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-tq-EaK">
+                                        <rect key="frame" x="-25" y="10" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="lbz-u1-Da3"/>
+                                            <constraint firstAttribute="width" constant="25" id="vNm-h7-0EO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ASA Classification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hiN-bz-pZr" userLabel="Sct Classification">
+                                        <rect key="frame" x="-0.66666666666662877" y="0.0" width="376.33333333333348" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="N0j-Ph-JBJ" secondAttribute="trailing" id="Qyt-ct-AoT"/>
+                                    <constraint firstItem="N0j-Ph-JBJ" firstAttribute="leading" secondItem="3s1-db-IMo" secondAttribute="leading" id="Rb8-XZ-xne"/>
+                                    <constraint firstAttribute="trailing" secondItem="yQK-tq-EaK" secondAttribute="trailing" id="S77-et-Gg3"/>
+                                    <constraint firstAttribute="bottom" secondItem="N0j-Ph-JBJ" secondAttribute="bottom" id="X7k-ig-DEo"/>
+                                    <constraint firstAttribute="height" constant="45" id="fu4-EC-Gvk"/>
+                                    <constraint firstItem="yQK-tq-EaK" firstAttribute="centerY" secondItem="3s1-db-IMo" secondAttribute="centerY" id="nfZ-43-YNe"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -13850,14 +13941,14 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxB-ZK-XW2" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="428" height="896"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Case/Patient " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWD-JJ-cUz" userLabel="Start New Case/Patient">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Edit Case/Patient " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWD-JJ-cUz" userLabel="Start New Case/Patient">
                                                 <rect key="frame" x="20" y="24" width="388" height="24"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="24"/>
                                                 <color key="textColor" name="AppBlack"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-ss-0Q0">
-                                                <rect key="frame" x="20" y="68" width="388" height="387"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="equalCentering" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7ga-ss-0Q0">
+                                                <rect key="frame" x="20" y="68" width="388" height="443"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dq9-0l-heb">
                                                         <rect key="frame" x="0.0" y="0.0" width="388" height="45"/>
@@ -13982,8 +14073,54 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                             <constraint firstAttribute="height" constant="1" id="GI7-Mm-Pfq"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="Bb5-Pd-Fid">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tjO-v3-0tl">
                                                         <rect key="frame" x="0.0" y="280" width="388" height="45"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6U-YI-5Mg">
+                                                                <rect key="frame" x="0.0" y="44" width="388" height="1"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="1" id="gTm-vr-obx"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disclosureArrow" translatesAutoresizingMaskIntoConstraints="NO" id="q89-RJ-dgw">
+                                                                <rect key="frame" x="363" y="10" width="25" height="25"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="25" id="7fl-j6-opv"/>
+                                                                    <constraint firstAttribute="width" constant="25" id="cEE-7G-WW2"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ASA Classification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-gH-ROs" userLabel="Sct Classification">
+                                                                <rect key="frame" x="-0.66666666666662877" y="0.0" width="376.33333333333348" height="45"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="qKu-Qu-Rtp" id="Erl-r9-r6q"/>
+                                                                </connections>
+                                                            </textField>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="0uv-Ic-C9T"/>
+                                                            <constraint firstItem="r6U-YI-5Mg" firstAttribute="leading" secondItem="tjO-v3-0tl" secondAttribute="leading" id="6Ne-Qe-v1N"/>
+                                                            <constraint firstAttribute="bottom" secondItem="r6U-YI-5Mg" secondAttribute="bottom" id="Ik5-Un-3gJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="r6U-YI-5Mg" secondAttribute="trailing" id="NB1-Gt-e41"/>
+                                                            <constraint firstItem="q89-RJ-dgw" firstAttribute="centerY" secondItem="tjO-v3-0tl" secondAttribute="centerY" id="TeR-dK-11j"/>
+                                                            <constraint firstAttribute="trailing" secondItem="q89-RJ-dgw" secondAttribute="trailing" id="ZGY-IE-9r5"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3dq-a4-Kbn">
+                                                        <rect key="frame" x="0.0" y="330" width="388" height="1"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="P44-dF-07y"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="101" translatesAutoresizingMaskIntoConstraints="NO" id="Bb5-Pd-Fid">
+                                                        <rect key="frame" x="0.0" y="336" width="388" height="45"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASA (Yes/No)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6D-O3-DP8">
                                                                 <rect key="frame" x="0.0" y="0.0" width="238" height="45"/>
@@ -14003,14 +14140,14 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                         </constraints>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lhq-aW-MTE">
-                                                        <rect key="frame" x="0.0" y="330" width="388" height="1"/>
+                                                        <rect key="frame" x="0.0" y="386" width="388" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="DfP-vw-TOA"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zko-US-XK4">
-                                                        <rect key="frame" x="0.0" y="336" width="388" height="45"/>
+                                                        <rect key="frame" x="0.0" y="392" width="388" height="45"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ing-n6-gre">
                                                                 <rect key="frame" x="0.0" y="0.0" width="388" height="45"/>
@@ -14043,7 +14180,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuC-T6-3VH">
-                                                        <rect key="frame" x="0.0" y="386" width="388" height="1"/>
+                                                        <rect key="frame" x="0.0" y="442" width="388" height="1"/>
                                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="OVm-Ci-tun"/>
@@ -14054,8 +14191,8 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                     <constraint firstItem="P6D-O3-DP8" firstAttribute="height" secondItem="lbr-0b-Szc" secondAttribute="height" id="Pho-oR-lyu"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="L0d-Cv-ZKy">
-                                                <rect key="frame" x="40" y="625" width="348" height="106"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="L0d-Cv-ZKy">
+                                                <rect key="frame" x="40" y="625" width="348" height="74"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Du5-Ox-wxp">
                                                         <rect key="frame" x="0.0" y="0.0" width="348" height="45"/>
@@ -14076,8 +14213,8 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                             <action selector="btnSave:" destination="qKu-Qu-Rtp" eventType="touchUpInside" id="Jbl-1c-Mxt"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-t5-KJE">
-                                                        <rect key="frame" x="0.0" y="61" width="348" height="45"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTi-t5-KJE">
+                                                        <rect key="frame" x="0.0" y="61" width="348" height="13"/>
                                                         <color key="backgroundColor" red="0.96470588239999999" green="0.91372549020000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="k0P-px-FBo"/>
@@ -14098,7 +14235,7 @@ The regular CME submission fee is $295.00 before the June 1st deadline, and $895
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-X6-k2a">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nhj-X6-k2a">
                                                 <rect key="frame" x="20" y="467" width="388" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
