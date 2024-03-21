@@ -115,13 +115,31 @@ class PatientCategoriesVC: UIViewController {
                 
                 for i in 0..<(self.arrFilteredCat?.count ?? 0) {
                     
-                    if i == 1 && Int(self.classification.suffix(1)) ?? 0 > 2 {
+                    if i == 0 && Int(self.classification.suffix(1)) ?? 0 > 2 {
                         self.arrSectionFlag.append(self.arrFilteredCat?[i].id! ?? 0)
+                    } else if i == 1 && self.asa {
+                        self.arrSectionFlag.append(self.arrFilteredCat?[i].id! ?? 0)
+                    } else if i == 2 && self.patientAge != "" {
+                        var _age = Int(self.patientAge) ?? -1
+                        if _age > 65 {
+                            self.arrSectionFlag.append(self.arrFilteredCat?[i].id! ?? 0)
+                        }
                     } else {
                         self.arrSectionFlag.append(0)
                     }
                     var arrTemp:[Int] = []
-                    for _ in 0..<(self.arrFilteredCat?[i].sub_category?.count ?? 0) {
+                    for j in 0..<(self.arrFilteredCat?[i].sub_category?.count ?? 0) {
+                        
+                        if i == 0 && Int(self.classification.suffix(1)) ?? 0 > 2 {
+                            arrTemp.append(self.arrFilteredCat?[i].sub_category?[j]["id"] as! Int)
+                        } else if i == 3 && self.patientAge != "" {
+                            var _age = Int(self.patientAge) ?? -1
+                            if j == 0 && (_age > 2 && _age < 12) {
+                                arrTemp.append(self.arrFilteredCat?[i].sub_category?[j]["id"] as! Int)
+                            } else if j == 1 && _age < 2 {
+                                arrTemp.append(self.arrFilteredCat?[i].sub_category?[j]["id"] as! Int)
+                            }
+                        }
                         
                         arrTemp.append(0)
                     }

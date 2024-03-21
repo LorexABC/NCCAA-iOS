@@ -155,6 +155,15 @@ class EditNewCaseVC: UIViewController {
         txtDate?.text = strDate
     }
     
+    func labelTabbed() {
+        let customView = Bundle.main.loadNibNamed("CategoryDetailsView", owner: self)?.first as! CategoryDetailsView
+        
+        customView.lblTitle.text = "Emergent (ASA Class E)"
+        customView.htmlText = "<p><b>Emergent (ASA Class E)</b></p>\n<p>The addition of “E” to the ASAPS (e.g., ASA 2E) denotes an emergency surgical procedure. The ASA defines an emergency as existing “when the delay in treatment of the patient would lead to a significant increase in the threat to life or body part.” You are required to have a minimum of (30) cases in Emergent Class E. Once the minimums have been met, the student may engage in any Emergent Class E Classes to reach the (30) case minimum for this main category. You may only select one sub-skill in this category per case. You may also select the “Other” sub-skill if a case is Emergent Class E but does not fit into any other sub-skill category.</p>\n<p>(source: www.statpearls.com)</p>\n<br>\n\n<p>The ASA defines an emergency as existing “when the delay in treatment of the patient would lead to a significant increase in the threat to life or body part.” For this category, the candidate may select this case if there is an urgency/emergency to provide immediate care and there is limited time for planning, assessment of the patient and set-up for the case.  You are required to have a minimum of (30) cases in the Emergent ASA Class. </p>"
+        customView.setContentInWebview()
+        customView.frame = view.bounds
+        view.addSubview(customView)
+    }
     
     // MARK: - Webservice
     func editCaseAPI() {
@@ -224,6 +233,9 @@ class EditNewCaseVC: UIViewController {
         obj.delegate = self
         obj.isFromEditCase = true
         obj.arrEditCat = arrCategories
+        obj.classification = selectedTextfield?.text as? String ?? ""
+        obj.asa = btnSwitch.isOn
+        obj.patientAge = txtAge?.text as? String ?? ""
         navigationController?.pushViewController(obj, animated: true)
     }
     
@@ -245,6 +257,7 @@ class EditNewCaseVC: UIViewController {
         
         if (sender.isOn){
             isASA = "yes"
+            self.labelTabbed()
         }
         else{
             isASA = "no"
