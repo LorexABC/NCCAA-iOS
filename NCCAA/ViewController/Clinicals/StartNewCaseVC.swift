@@ -22,7 +22,7 @@ class StartNewCaseVC: UIViewController {
     var isASA = "no"
     var picker:UIDatePicker?
     var arrCat:[Int] = []
-    var arrClassification = ["ASA1", "ASA2", "ASA3", "ASA4", "ASA5", "ASA6"]
+    var arrClassification = ["ASA 1", "ASA 2", "ASA 3", "ASA 4", "ASA 5", "ASA 6"]
     
     // MARK: - IBOutlet
     @IBOutlet weak var startTimePicker: UIDatePicker!
